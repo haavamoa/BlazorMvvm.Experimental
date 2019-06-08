@@ -1,3 +1,4 @@
+using BlazorMvvm.Experimental.ViewModels;
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -7,6 +8,7 @@ namespace BlazorMvvm.Experimental
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<CounterViewModel>();
         }
 
         public void Configure(IComponentsApplicationBuilder app)

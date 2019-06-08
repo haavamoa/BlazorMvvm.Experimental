@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -7,10 +7,18 @@
     <base href="/" />
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
     <link href="css/site.css" rel="stylesheet" />
+<script WARNING="Injected by Bionic Monitor" src="https://unpkg.com/@aspnet/signalr@1.0.3/dist/browser/signalr.min.js"></script>
+<script WARNING="Injected by Bionic Monitor" src="bionic/reloader.js"></script>
 </head>
 <body>
-    <app>Loading...</app>
+<app>
+    <div class="container d-flex justify-content-center">
+        <div class="spinner-border m-5" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+</app>
 
-    <script src="_framework/blazor.webassembly.js"></script>
+<script src="_framework/blazor.webassembly.js"></script>
 </body>
 </html>

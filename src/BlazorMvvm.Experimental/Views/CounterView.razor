@@ -1,0 +1,10 @@
+﻿@inject CounterViewModel CounterViewModel
+
+<h2 class="toast-header">Counter</h2>
+<div class="container">
+    <div class="row">Counter : @CounterViewModel.Counter</div>
+    <div class="row">
+        <button type="button" class="btn btn-success btn-lg" onclick=@(() => CounterViewModel.IncrementCounterCommand.Execute(null))>+</button>
+        <button type="button" class="btn btn-danger btn-lg" onclick=@(() => CounterViewModel.DecrementCounterCommand.Execute(null))>-</button>
+    </div>
+</div>
