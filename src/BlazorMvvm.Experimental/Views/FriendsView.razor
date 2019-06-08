@@ -1,0 +1,22 @@
+﻿@inject FriendsViewModel FriendsViewModel
+
+<div class="container">
+    <div class="row">
+        <input type="text" bind-value-oninput="@FriendsViewModel.NewFriendName"/>
+        <button type="button" class="btn btn-success" onclick="@(() => FriendsViewModel.AddNewFriendCommand.Execute(null))" disabled="@(!FriendsViewModel.AddNewFriendCommand.CanExecute(null))">Add friend</button>
+    </div>
+    <div class="row">
+        Friends:
+        <div class="container">
+            @foreach (var friend in FriendsViewModel.Friends)
+            {
+                <div class="row">
+                    <div class="container">
+                        @friend.Name
+                        <button type="button" class="btn btn-danger" onclick="@(() => friend.RemoveFriendCommand.Execute(null))">-</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -9,6 +9,7 @@ namespace BlazorMvvm.Experimental
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<CounterViewModel>();
+            services.AddSingleton<FriendsViewModel>();
         }
 
         public void Configure(IComponentsApplicationBuilder app)
